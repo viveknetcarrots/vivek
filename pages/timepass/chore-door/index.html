@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chore Door!</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header"> <img src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/logo.svg"
+            alt="Chore Door logo"></header>
+
+    <main>
+        <div id="i-title"> <img src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/star.svg"
+                alt="star"> Instructions <img
+                src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/star.svg" alt="star"> </div>
+
+        <div id="instructions">
+
+            <div class="steps">
+                <div class="num"> 1 </div>
+                <div class="text"> Hiding behind one of these doors is the ChoreBot. </div>
+            </div>
+
+            <div class="steps">
+                <div class="num"> 2 </div>
+                <div class="text"> Your mission is to open all of the doors without running into the ChoreBot. </div>
+            </div>
+
+            <div class="steps">
+                <div class="num"> 3 </div>
+                <div class="text"> If you manage to avoid the ChoreBot until the very last door, you win! </div>
+            </div>
+
+            <div class="steps">
+                <div class="num"> 4 </div>
+                <div class="text"> See if you can score a winning streak! </div>
+            </div>
+
+        </div>
+
+        <div id="door-row">
+            <div class="door"> <img
+                    src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
+                    alt="door" id="left-door">
+            </div>
+            <div class="door"> <img
+                    src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
+                    alt="door" id="middle-door">
+            </div>
+            <div class="door"> <img
+                    src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
+                    alt="door" id="right-door">
+            </div>
+        </div>
+
+        <div id="button-wrapper">
+            <button id="gamebutton"> Good luck! </button>
+        </div>
+
+        <div id="streaks-container">
+            <div class="streaks">
+                <div class="streak-text">
+                    Current streak:
+                </div>
+                <div class="streak-counter" id="current">
+                    0
+                </div>
+            </div>
+
+            <div class="streaks">
+                <div class="streak-text">
+                    Best streak:
+                </div>
+                <div class="streak-counter" id="best">
+                    0
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138297887-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138297887-1');
+    </script>
+</body>
+
+</html>

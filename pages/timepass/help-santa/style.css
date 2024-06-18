@@ -1,0 +1,494 @@
+:root {
+  --bg-color:#238A86;
+  --base-red:#DC3B31;
+  --pale-red:#E86934;
+  --dark-red:#BD3524;
+}
+
+html {
+  min-height:100vh;
+  background-color:burlywood;
+  /*   thanks to Bennett Feely for the bg pattern*/
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      var(--bg-color) 0,
+      var(--bg-color) 40px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      var(--base-red) 0,
+      var(--base-red) 40px
+    );
+  background-blend-mode: multiply;
+  background-repeat:repeat-x;
+  background-position:0 90%;
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+#the-lp {
+  background: url("https://contentservice.mc.reyrey.net/image_v1.0.0/?id=bafe9067-2055-56a9-8c19-1fcd02f55ab9&637364822924768594"), Burlywood;
+  padding:40px;
+  box-sizing:border-box;
+  width:100%;
+  max-width:980px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;    
+  font-size:0;
+  border-radius:5px;
+  box-shadow:0px 0px 30px rgba(0,0,0,1);
+}
+
+#lp-content {
+  width:100%;
+  min-width:320px;
+  max-width:500px;
+  height:100%;
+  min-height:568px;
+  position:relative;
+  display:inline-block;
+  vertical-align:middle;
+  box-sizing:border-box;
+  /*   background:beige; */
+}
+
+#play_me {
+  /*   background:var(--base-red); */
+  position:relative;
+  top:10px;
+  left:0;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:'Montserrat', sans-serif;
+  z-index:999;
+  /*   display:none; */
+}
+#play_me h1 {
+  font-family:'Mali', sans-serif;
+  font-size:48px;
+  font-weight:500;
+  color:var(--base-red);
+  margin:0;
+  text-shadow:3px 3px rgba(0,0,0,.13);
+}
+#play_me span {
+  width:100%;
+  max-width:400px;
+  display:block;  
+  font-weight:500;
+  font-size:20px;  
+  color:white;
+  margin:15px auto;
+  color:var(--base-red);
+}
+
+/* offer section */
+#lp-offer {  
+  width:100%;
+  max-width:400px;
+  position:relative;
+  padding:10px;
+  box-sizing:border-box; 
+  font-size:22px; 
+  z-index:1;
+  font-family:'Montserrat', sans-serif;
+  background:var(--base-red);
+  margin:0 auto 30px auto;
+  border-radius:5px;
+  box-shadow:10px 10px 10px rgba(0,0,0,.13);
+}
+
+#lp-offer P {
+  text-align:center;
+  margin:0;
+}
+#lp-offer p:nth-child(1) {
+  font-size:36px;
+  font-weight:700;
+}
+#lp-offer p:nth-child(2) {
+  font-size:18px;
+  margin:10px 0;
+  font-weight:500;
+}
+#lp-offer p:nth-child(3) {
+  font-size:12px;
+  font-weight:300;
+}
+#lp-offer p:nth-child(4) {
+  font-size:12px;
+  font-weight:300;
+  margin-top:10px;
+}
+
+#lp-cta {
+  width:100%;
+  max-width:250px;
+  height:40px;
+  cursor:pointer;
+  display:block;
+  padding:10px;
+  box-sizing:border-box;
+  background:white;
+  text-align:center;
+  color:var(--base-red);
+  font-size:18px;
+  text-decoration:none;
+  z-index:1;
+  transition:1s;
+  margin:20px auto;
+  border-radius:5px;
+}
+
+#lp-cta:hover {
+  text-decoration:underline;
+}
+/* end offer section */
+
+#lp-the-game {
+  width:100%;
+  max-width:320px;
+  height:100%;
+  min-height:568px;
+  position:relative;
+  margin:0 30px 0 0;
+  font-family:'Montserrat', sans-serif;
+  overflow:hidden;
+  text-align:center;
+  user-select:none;
+  display:inline-block;
+  vertical-align:middle;
+  background-image:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=3c57f00a-94fb-5bc4-aad0-3824be837de8&637360346397280285'), linear-gradient(to top, white, var(--bg-color));
+  background-repeat:no-repeat;
+  box-shadow:10px 10px 10px rgba(0,0,0,.13);
+  border-radius:5px;
+}
+
+#snow {
+  min-width:100%;
+  min-height:100%;
+  position:absolute;  
+  left:0;
+  top:0;
+  pointer-events:none;
+}
+.snowflake {
+  position:absolute;
+  background:white;
+  top:-100px;
+  border-radius:50%;
+  animation:snow 15s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes snow {
+  100% { top: 90%; opacity:0; }
+}
+
+p {
+  color:white;
+  line-height:100%;
+}
+#score {
+  font-size:12px;
+  color:var(--bg-color);
+  background:rgba(255,255,255,.75);
+  padding:10px;
+  position:absolute;
+  left:10px;
+  top:10px;
+  border-radius:50%;
+  width:35px;
+  height:35px;
+}
+#score span {
+  font-size:24px; 
+  line-height:80%;
+}
+
+#high_score {
+  font-size:14px;
+  color:var(--bg-color);
+  background:rgba(255,255,255,.25);
+  padding:10px;
+  position:absolute;
+  right:10px;
+  top:10px;
+  border-radius:50%;
+  width:35px;
+  height:35px;
+}
+#high_score span {
+  font-weight:700;
+}
+
+#dialog {
+  width:100%;
+  max-width:125px;
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  position:absolute;
+  right:62.5%;
+  top:0px;
+  user-select:none; 
+  transform:translateY(-125%);
+  font-size:14px;
+}
+.offDialog {  
+  transition:1s;
+  opacity:0; }
+
+#dialog:after {
+  content:'';
+  width:20px;
+  height:20px;
+  position:absolute;
+  bottom:0;
+  right:25px;
+  background:white;
+  transform-origin:left bottom;
+  transform:rotate(45deg);
+}
+
+#lp-santa {
+  width:100%;
+  max-width:320px;
+  height:100%;
+  max-height:107px; background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=d483e64d-4886-5bdc-9b78-e84ab51b6f99&637360507984807363');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  position:absolute;
+  left:50%;
+  top:33%;
+  transform:translate(0%,-50%);
+  z-index:999;
+  animation:bob 2s linear infinite;
+}
+
+@keyframes bob {
+  50% { transform:translate(0%,-60%); }
+}
+
+.dust {
+  width:5px;
+  height:5px;
+  border-radius:5px;
+  position:absolute;
+}
+.dust:after {
+  content:'';
+  width:100%;
+  height:100%;
+  background:white;
+  border-radius:5px;
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:0;
+  animation:dust1 1.2s linear infinite;
+}
+@keyframes dust1 {
+  50% { opacity:.75 }
+  100% { left:-100px; width: 30px; opacity:0; }
+}
+
+.dust:nth-child(2) {
+  top:97%;
+  left:15px;
+}
+.dust:nth-child(2):after {
+  animation-delay:.8s;
+}
+.dust:nth-child(3) {
+  top:95%;
+  left:57%;  
+}
+.dust:nth-child(3):after {
+  animation-delay:.4s;
+}
+.dust:nth-child(4) {
+  top:95%;
+  left:95%;
+}
+
+.casa {
+  position:absolute;
+  bottom:10vh;
+  left:calc(100% + 50px);
+  background-color: silver;
+  background-image: linear-gradient(335deg, #b00 23px, transparent 23px),
+    linear-gradient(155deg, #d00 23px, transparent 23px),
+    linear-gradient(335deg, #b00 23px, transparent 23px),
+    linear-gradient(155deg, #d00 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+  z-index:9;
+  animation:casaSlide 10s linear forwards;
+}
+/* .casa:before {
+content:'';
+width:320px;
+height:500px;
+position:absolute;
+top:100%;
+left:-100px;
+background:inherit;
+border-radius:30px;
+box-shadow:0 -30px 0 white;
+} */
+.casa:after {
+  content:'';
+  width:130%;
+  height:30px;
+  position:absolute;
+  left:-15%;
+  top:0;
+  background:inherit;
+  border-radius:10px 10px 0 0;
+  box-shadow:0 10px 10px rgba(0,0,0,.25), 0 -15px white;
+}
+@keyframes casaSlide {
+  100% { left:-105px; }
+}
+
+.casa .present {
+  position:absolute;
+  top:0;
+  left:0;
+  animation:none;
+}
+
+.hitbox {
+  width:100%;
+  height:10px;
+  background:red;
+  position:absolute;
+  top:-12.5px;
+  left:0;
+}
+
+.present_hitbox {
+  width:100%;
+  height:10px;
+  /*   background:red; */
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+.present {
+  width:45px;
+  height:45px;
+  position:absolute;
+  background:linear-gradient(to right, transparent 45%, Firebrick 45%, Firebrick 55%, transparent 55%), linear-gradient(to bottom, var(--base-red) 45%, Firebrick 45%, Firebrick 55%, var(--base-red) 55%);
+  z-index:9999;
+  transform:scale(.1);
+  margin-left:0px;
+  margin-top:-15px;
+  animation:present 6s linear forwards;
+}
+@keyframes present {
+  5% { transform:scale(1) translate(-150%, -150%) rotate(-360deg); }
+  100% { top:calc(100% + 150px); transform:scale(1) translate(-300%,0%) rotate(-360deg); }
+}
+.present:after {
+  content:'';
+  width:150%;
+  height:120%;
+  /*   border-radius:50%; */
+  position:absolute;
+  top:0%;
+  left:-25%;
+  background:white;
+  clip-path:polygon(50% 0%, 80% 20%, 100% 50%, 0% 50%, 20% 20%);
+  animation:float .3s linear .4s forwards;
+  opacity:0;
+  transform:translate(0%, 0%) scaleY(.1);
+  z-index:-1;
+}
+.present:before {
+  content:'';
+  width:80%;
+  height:80%;
+  position:absolute;
+  top:0%;
+  left:5px;
+  box-shadow:inset -2px -2px 0 rgba(255,255,255,.5);
+  transform:translate(0%,0%) scale(.1) rotate(45deg);
+  clip-path:polygon(100% 0%, 100% 100%, 0% 100%);
+  z-index:-1;
+  animation:strings .3s linear .4s forwards;
+  opacity:0;
+}
+
+@keyframes float {
+  100% { transform:translate(0, -100%) scaleY(1); opacity:1;}
+}
+
+@keyframes strings {
+  100% { transform:translate(0, -125%) scale(1) rotate(45deg); opacity:1; }
+}
+
+#tap_me {
+  width:100px;
+  height:100px;
+  color:var(--base-red);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:99999;
+  padding-top:20px 20px 20px 20px;
+  border-radius:50%;
+  background:rgba(255,255,255,.5);
+  font-size:20px;
+  line-height:100%;
+  font-family:'Mali', sans-serif;
+  cursor:pointer;
+}
+#tap_me:after {
+  content:'Tap \a to \a Play';
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+#tap_me:hover {
+  background:rgba(255,255,255,.75);
+}
+
+@media screen and (max-width:950px) {
+  #the-lp {
+    position:relative;
+    transform:none;
+    left:0;
+    top:0;
+    padding:40px 0;
+    background:none;
+    box-shadow:none;
+  }
+  #lp-content {
+    border-radius:5px;
+    margin:0 auto;
+    display:block;
+    background: url("https://www.transparenttextures.com/patterns/natural-paper.png"), Burlywood;
+    padding-bottom:20px;
+  }
+  #lp-the-game {
+    margin-right:0;
+    margin-bottom:50px;
+  }
+}

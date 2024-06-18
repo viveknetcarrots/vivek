@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="info">
+        <div id="infoText"></div>
+        <button class="info-btn">OK</button>
+    </div>
+    <div class="square">
+        <div class="cover">
+            <div class="row">
+                <div class="field">X</div>
+                <div class="field">O</div>
+                <div class="field">X</div>
+            </div>
+            <div class="row">
+                <div class="field">O<span></span></div>
+                <div class="field">X</div>
+                <div class="field">O</div>
+            </div>
+            <div class="row">
+                <div class="field">X</div>
+                <div class="field">O</div>
+                <div class="field">X</div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu-bg"></div>
+        <div class="table">
+            <h1>Start new game as:</h1>
+            <button class="btn">X</button>
+            <button class="btn">O</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138297887-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138297887-1');
+    </script>
+</body>
+
+</html>

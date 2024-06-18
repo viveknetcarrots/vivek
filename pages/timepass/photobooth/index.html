@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photobooth</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1>Photo Booth</h1>
+
+    <div class="photobooth">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <video class="player"></video>
+                    <img src="" id="img">
+                </div>
+                <div class="col-sm-2">
+                    <div class="controls">
+                        <div class="btn-container">
+                            <a onClick="takePhoto()" class="action-button shadow animate blue">Take Photo</a>
+                        </div>
+                        <div class="btn-container">
+                            <a onClick="downloadPhoto()" class="action-button shadow animate green download disabled" id="download">Download</a>
+                        </div>
+                        
+                        <div class="alphaContainer">
+                            <input type="hidden" value="1" min="0.05" max=1 step="0.05" name="alpha">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <canvas class="photo" id="photoCanvas"></canvas>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="strip"></div>
+    </div>
+
+    <audio class="snap" src="./snap.mp3" hidden></audio>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138297887-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138297887-1');
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

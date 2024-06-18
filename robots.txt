@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: 
+sitemap: https://www.1linetech.com/sitemap.xml

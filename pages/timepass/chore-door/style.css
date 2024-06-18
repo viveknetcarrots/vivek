@@ -1,0 +1,102 @@
+body {
+  background-color: #010165;
+  margin: 0;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: turquoise;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vw;
+}
+
+#i-title {
+  text-align: center;
+  margin: 3vw;
+  color: turquoise;
+}
+
+#instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  width: 25em;
+  margin-left: 2.5vw;
+  font-size: 1em;
+  font-weight: 200;
+  padding-top: 0.5vw;
+}
+
+.num {
+  font-size: 2.3vw;
+  color: turquoise;
+}
+
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#gamebutton {
+  background-color: coral;
+  padding: 1em;
+  font-size: 1em;
+  border: 0;
+  cursor: pointer;
+}
+
+#streaks-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.streaks {
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+}
+
+.streak-text {
+  font-size: 1em;
+  text-align: center;
+  font-weight: 200;
+}
+
+.streak-counter {
+  font-size: 4em;
+  text-align: center;
+  background-color: turquoise;
+  color: black;
+  width: 1.5em;
+  margin: 1vw;
+}
+
+#door-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2vw;
+  margin-top: 0;
+}
+
+.door {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  cursor: pointer;
+}
